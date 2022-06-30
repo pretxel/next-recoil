@@ -46,9 +46,11 @@ const AnimalList = () => {
                 Loading ...
             </Typography>}>
                 <Box sx={{ flexGrow: 1 }}>
-                    <Grid container spacing={4}>
+                    <Grid container spacing={{ xs: 3 }} columns={{ xs: 4, sm: 8, md: 12, lg: 12 }} alignItems="center" justify="center" style={{ minHeight: "100vh" }}>
                         {animals.map(animal =>
-                            <Grid key={animal.id} item xs={3} >
+
+                            <Grid item key={animal.id} xs={4} sm={4} md={4} lg={3} >
+                                {/* <h1>xs</h1> */}
                                 <AnimalCard animal={animal} likes={likes} addLike={addLike} removeLike={removeLike} />
                             </Grid>
                         )}

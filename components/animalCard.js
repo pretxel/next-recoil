@@ -20,7 +20,7 @@ const AnimalCard = ({ animal, likes, addLike, removeLike }) => {
 
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card>
             <CardActionArea>
                 <Image
                     loader={myLoader}
