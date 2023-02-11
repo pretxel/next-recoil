@@ -16,7 +16,8 @@ const AnimalList = () => {
 
     useEffect(() => {
         if (!isLoading) {
-            setAnimals(animalsData)
+            const animalDT = animalsData.map((animal,index) => { return{id: index, img: animal}});
+            setAnimals(animalDT)
         }
     }, [animalsData, isLoading])
 

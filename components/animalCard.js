@@ -15,7 +15,7 @@ const AnimalCard = ({ animal, likes, addLike, removeLike }) => {
     }
 
     const myLoader = () => {
-        return animal.image_link
+        return animal.img
     }
 
 
@@ -24,21 +24,18 @@ const AnimalCard = ({ animal, likes, addLike, removeLike }) => {
             <CardActionArea>
                 <Image
                     loader={myLoader}
-                    src={animal.image_link}
-                    alt={animal.name}
+                    src={animal.img}
+                    alt={animal.id}
                     width={'200'}
                     height={'150'}
-                    layout='responsive'
                     placeholder='blur'
-                    blurDataURL={animal.image_link}
+                    blurDataURL={animal.img}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h6" component="div">
-                        {animal.name}
+                        {animal.message}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {animal.habitat}
-                    </Typography>
+               
                 </CardContent>
             </CardActionArea>
             <CardActions>
